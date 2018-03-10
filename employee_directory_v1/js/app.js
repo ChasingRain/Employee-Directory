@@ -58,13 +58,13 @@ $.ajax({
         infoList += "Birthday: " + employee.dob + "</p>";
         $('#modalcontent').html(infoList)
         $('.modal').modal();
-        $('.previous').removeAttr("disabled");
-        $('.next').removeAttr("disabled");
+        $('.previous').removeClass("hide");
+        $('.next').removeClass("hide");
         if(arrayId <= 0){
-          $('.previous').attr("disabled", "disabled");
+          $('.previous').addClass('hide');
         }
-        if(arrayId >= 11){
-          $('.next').attr("disabled", "disabled");
+        if(arrayId >= $('li').length - 1){
+          $('.next').addClass('hide');
         }
       })
       $('.previous').click(function() {
@@ -85,13 +85,13 @@ $.ajax({
         infoList += "Birthday: " + employee.dob + "</p>";
         $('#modalcontent').html(infoList)
         $('.modal').modal();
-        $('.previous').removeAttr("disabled");
-        $('.next').removeAttr("disabled");
-        if(arrayId === 0){
-          $('.previous').attr("disabled", "disabled");
+        $('.previous').removeClass("hide");
+        $('.next').removeClass("hide");
+        if(arrayId <= 0){
+          $('.previous').addClass('hide');
         }
-        if(arrayId === 11){
-          $('.next').attr("disabled", "disabled");
+        if(arrayId >= $('li').length - 1){
+          $('.next').addClass('hide');
         }
       });
       $('.next').click(function() {
@@ -112,13 +112,13 @@ $.ajax({
         infoList += "Birthday: " + employee.dob + "</p>";
         $('#modalcontent').html(infoList)
         $('.modal').modal();
-        $('.previous').removeAttr("disabled");
-        $('.next').removeAttr("disabled");
-        if(arrayId === 0){
-          $('.previous').attr("disabled", "disabled");
+        $('.previous').removeClass("hide");
+        $('.next').removeClass("hide");
+        if(arrayId <= 0){
+          $('.previous').addClass('hide');
         }
-        if(arrayId === 11){
-          $('.next').attr("disabled", "disabled");
+        if(arrayId >= $('li').length - 1){
+          $('.next').addClass('hide');
         }
       });
       $('li').mouseover(function() {
